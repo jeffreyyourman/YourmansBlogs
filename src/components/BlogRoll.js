@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-// import TagsPage from '../pages/tags/index';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+const searchIcon = <FontAwesomeIcon icon={faSearch} />
+
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -65,7 +69,14 @@ class BlogRoll extends React.Component {
             ))}
         </div>
         <div className="column filterPosts is-one-quarter">
-          <div style={{ "display": "inline-block" }} className="is-parent column is-5">
+          <div style={{ "display": "inline-block" }} className="is-parent">
+            {/* <> */}
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-medium" type="text" placeholder="Search blogs" />
+              <span class="icon is-medium is-right">
+                {searchIcon}
+              </span>
+            </div>
             <h3>Tags:</h3>
             <p>{tags.map((tag) => <p>{tag}</p>)}</p>
             {/* {tags} */}
@@ -76,7 +87,7 @@ class BlogRoll extends React.Component {
               tags
 
             */}
-            {/* <TagsPage /> */}
+            {/* </> */}
           </div>
         </div>
       </div>
