@@ -95,10 +95,9 @@ class BlogRoll extends React.Component {
               </div>
             ))}
         </div>
-        <div className="column box filterPosts is-one-quarter">
+        {/* <div className="column filterPosts is-one-quarter">
           <div style={{ "display": "inline-block" }} className="is-parent">
-            {/* <> */}
-            <div style={{ "display": "flex" }} className="control has-icons-left has-icons-right">
+            <div className="control has-icons-left has-icons-right">
               <input className="input is-medium" value={this.state.blogSearchValue} onChange={this.getSearchVal} type="text" placeholder="Search blogs" />
               <button onClick={() => {
                 this.getSearches(this.state.blogSearchValue, posts)
@@ -107,20 +106,18 @@ class BlogRoll extends React.Component {
             </div>
             <h3>Newest</h3>
             {!this.state.searchedArr ? (
-              <p>Search for Blogs</p>
+              <p>top blogs</p> 
             ) : this.state.searchedArr.length !== 0 ? this.state.searchedArr.map((blogItem, index) => (
               <>
-                {/* <PreviewCompatibleImage
+                <PreviewCompatibleImage
                   imageInfo={{
                     image: blogItem.node.frontmatter.featuredimage,
                     alt: `featured image thumbnail for post ${blogItem.node.frontmatter.title}`,
-                  }} /> */}
-                <div style={{marginBottom:'20px'}}>
-                  <Link key={Math.random()} to={blogItem.node.fields.slug}>
-                    <h3 style={{'marginBottom': 0}}>{blogItem.node.frontmatter.title}</h3>
-                    <p>{blogItem.node.frontmatter.date}</p>
-                  </Link>
-                </div>
+                  }} />
+                <Link key={Math.random()} to={blogItem.node.fields.slug}>
+                  <h3>{blogItem.node.frontmatter.title}</h3>
+                  <p>{blogItem.node.frontmatter.date}</p>
+                </Link>
               </>
             )) : <p>No blogs found</p>}
             <hr />
@@ -136,16 +133,8 @@ class BlogRoll extends React.Component {
             </ul>
 
 
-            {/* 
-              search component
-              categories
-              recent posts
-              tags
-
-            */}
-            {/* </> */}
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }
@@ -163,7 +152,7 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query BlogRollMainQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
