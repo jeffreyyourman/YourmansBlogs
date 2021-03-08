@@ -100,7 +100,7 @@ export const IndexPageTemplate = ({
                 </div> */}
                 <div className="column">
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Latest stories index page
                   </h3>
                   <BlogRollIndex />
                   <div className="column">
