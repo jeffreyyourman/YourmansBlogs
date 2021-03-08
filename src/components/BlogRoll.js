@@ -12,7 +12,6 @@ const searchIcon = <FontAwesomeIcon icon={faSearch} />
 class BlogRoll extends React.Component {
   constructor(props) {
     super(props);
-    // Don't call this.setState() here!
     this.state = { searchedArr: null, blogSearchValue: "" };
     this.getSearchVal = this.getSearchVal.bind(this);
     this.getSearches = this.getSearches.bind(this);
@@ -23,7 +22,6 @@ class BlogRoll extends React.Component {
   }
   getSearches(keyword, data) {
     console.log('parameter data', data);
-    // var data = ["Hello world, welcome to the universe.", "Food blog", "my food blog", "arts and crafts", "Art stuff"];
     var newStr = data.filter((lowerme) => {
       const element = lowerme;
       let title = element.node.frontmatter.title

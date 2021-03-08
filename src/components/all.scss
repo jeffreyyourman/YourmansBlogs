@@ -8,9 +8,27 @@ $primary: $kaldi-red;
 $primary-invert: $kaldi-red-invert;
 $body-color: #333;
 $black: #2b2523;
+// $body-background-color
 
-// .navbar .navbar-menu
-//   {box-shadow:none !important;}
+body {
+  background-color: #f2f1f1;
+}
+.layoutDiv > .navbar {
+  background-color: #f2f1f1;
+}
+
+// #gatsby-focus-wrapper > div > div > section.section.categoryNavbar {
+//   padding: 0px;
+// }
+
+// #gatsby-focus-wrapper > div > div > section.section.blogSection {
+//   padding: 1.5rem 1.5rem;
+// }
+
+#gatsby-focus-wrapper > div > div > section:nth-child(2) > div > div > div:nth-child(1) > nav {
+  background-color: #f2f1f1;
+}
+
 .taglist > .allTags {
   font-size: 14px;
   margin: 0 6px 8px 0;
@@ -20,9 +38,9 @@ $black: #2b2523;
   color: #d64000;
 }
 // .allTags:hover {
-  // color: #fff;
-  // border: 1px solid #32627b;
-  // background: #32627b;
+// color: #fff;
+// border: 1px solid #32627b;
+// background: #32627b;
 // }
 .taglist > .allTags > .tagLink {
   color: #d64000;
