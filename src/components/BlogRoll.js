@@ -38,6 +38,8 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     let tags = []
+    let titleMaxLength = 0;
+    let descriptionMaxLength = 0;
     posts.forEach((post) => {
       if (post.node.frontmatter.tags) {
         post.node.frontmatter.tags.forEach(element => {
@@ -45,13 +47,17 @@ class BlogRoll extends React.Component {
         });
       }
     });
-
+    
     return (
-      <div className="columns is-multiline is-mobile">
-        <div className="column">
+      <div className="columns is-desktop">
+        <div style={{marginRight:'10px'}}className="columns">
           {posts &&
-            posts.map(({ node: post }) => (
-              <div style={{ "display": "inline-block" }} className="is-parent column is-5" key={post.id}>
+            posts.map(({ node: post }) => {
+              // console.log('post', post);
+             
+              // console.log('description', post.excerpt.length);
+              // let paddedDescription = post.excerpt.padEnd(300)
+              return <div style={{ "display": "inline-block" }} className="column" key={post.id}>
                 <article
                   className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
                     }`}
@@ -59,7 +65,7 @@ class BlogRoll extends React.Component {
 
                   <header>
                     {post.frontmatter.featuredimage ? (
-                      <div className="featured-thumbnail">
+                      <div style={{ margin: '0px' }} className="featured-thumbnail">
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: post.frontmatter.featuredimage,
@@ -69,29 +75,34 @@ class BlogRoll extends React.Component {
                       </div>
                     ) : null}
                   </header>
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                  </p>
-                  <p>
-                    {post.excerpt}
-                    <br />
+                  <div>
+                    <p  style={{'whiteSpace': 'break-spaces'}} className="post-meta">
+                      <Link
+                        className="title has-text-primary is-size-4"
+                        to={post.fields.slug}
+                      >
+                      {`${post.frontmatter.title.padEnd(titleMaxLength - post.frontmatter.title.length, ' ')}`}
+
+                        {/* {post.frontmatter.title} */}
+                      </Link>
+                      <span> &bull; </span>
+                      <span className="subtitle is-size-5 is-block">
+                        {post.frontmatter.date}
+                      </span>
+                    </p>
+                    <p style={{'whiteSpace': 'break-spaces'}}>
+                      {post.excerpt.padEnd(200, ' ')}
+                      {/* {`${post.excerpt.length > 100 ? post.excerpt.slice(0,100) : post.excerpt.padEnd(100, ' ')}`} */}
+                      {/* <br />
                     <br />
                     <Link className="button" to={post.fields.slug}>
                       Keep Reading →
-                  </Link>
-                  </p>
+                  </Link> */}
+                    </p>
+                  </div>
                 </article>
               </div>
-            ))}
+            })}
         </div>
         <div className="column box filterPosts is-one-quarter">
           <div style={{ "display": "inline-block" }} className="is-parent">
@@ -113,9 +124,9 @@ class BlogRoll extends React.Component {
                     image: blogItem.node.frontmatter.featuredimage,
                     alt: `featured image thumbnail for post ${blogItem.node.frontmatter.title}`,
                   }} /> */}
-                <div style={{marginBottom:'20px'}}>
+                <div style={{ marginBottom: '20px' }}>
                   <Link key={Math.random()} to={blogItem.node.fields.slug}>
-                    <h3 style={{'marginBottom': 0}}>{blogItem.node.frontmatter.title}</h3>
+                    <h3 style={{ 'marginBottom': 0 }}>{blogItem.node.frontmatter.title}</h3>
                     <p>{blogItem.node.frontmatter.date}</p>
                   </Link>
                 </div>
@@ -127,7 +138,7 @@ class BlogRoll extends React.Component {
               {tags ? tags.map((tag, index) => (
                 <li key={index + 1000} className="allTags">
                   <Link className="tagLink" to={`/tags/${kebabCase(tag)}/`}>
-                    {tag}
+                    {tag.padEnd(100, ' ')}
                   </Link>
                 </li>
               )) : <p>No tags found</p>}
