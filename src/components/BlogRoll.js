@@ -38,8 +38,7 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     let tags = []
-    let titleMaxLength = 0;
-    let descriptionMaxLength = 0;
+
     posts.forEach((post) => {
       if (post.node.frontmatter.tags) {
         post.node.frontmatter.tags.forEach(element => {
@@ -49,15 +48,15 @@ class BlogRoll extends React.Component {
     });
 
     return (
-      <div className="columns is-desktop">
-        <div style={{ marginRight: '10px' }} className="columns">
+      <div className="columns">
+        <div style={{ marginRight: '10px' }}>
           {posts &&
             posts.map(({ node: post }) => {
               // console.log('post', post);
 
               // console.log('description', post.excerpt.length);
               // let paddedDescription = post.excerpt.padEnd(300)
-              return <div style={{ "display": "inline-flex" }} className="column" key={post.id}>
+              return <div style={{display:'inline-flex', width:'50%'}} className="column" key={post.id}>
                 <article
                   className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
                     }`}
@@ -78,24 +77,21 @@ class BlogRoll extends React.Component {
                     ) : null}
                   </header>
                   <div>
-                    <span style={{fontSize:'12px'}} className="subtitle">
+                    <span styyyle={{fontSize:'12px'}} className="subtitle">
                       {post.frontmatter.date}
                     </span>
-                    <p style={{ 'whiteSpace': 'break-spaces' }} className="post-meta">
+                    <p styyyle={{ 'whiteSpace': 'break-spaces' }} className="post-meta">
                       <Link
                         className="title has-text-primary is-size-4"
                         to={post.fields.slug}
                       >
-                        {`${post.frontmatter.title.padEnd(titleMaxLength - post.frontmatter.title.length, ' ')}`}
-
-                        {/* {post.frontmatter.title} */}
+                        {`${post.frontmatter.title}`}
+                        {/* {`${post.frontmatter.title.padEnd(titleMaxLength - post.frontmatter.title.length, ' ')}`} */}
                       </Link>
 
                     </p>
-                    <p style={{ 'whiteSpace': 'break-spaces' }}>
+                    <p styyyle={{ 'whiteSpace': 'break-spaces' }}>
                       {post.excerpt}
-                      {/* {`${post.excerpt.length > 100 ? post.excerpt.slice(0,100) : post.excerpt.padEnd(100, ' ')}`} */}
-
                     </p>
 
                   </div>
@@ -103,16 +99,16 @@ class BlogRoll extends React.Component {
               </div>
             })}
         </div>
-        <div className="column box filterPosts is-one-quarter">
-          <div style={{ "display": "inline-block" }} className="is-parent">
+        <div className="column box is-one-fifth filterPosts">
+          <div styyyle={{ "display": "inline-block" }} className="">
             {/* <> */}
-            <div style={{ "display": "flex" }} className="control has-icons-left has-icons-right">
+            {/* <div styyyle={{ "display": "flex" }} className="control has-icons-left has-icons-right">
               <input className="input is-medium" value={this.state.blogSearchValue} onChange={this.getSearchVal} type="text" placeholder="Search blogs" />
               <button onClick={() => {
                 this.getSearches(this.state.blogSearchValue, posts)
                 this.setState({ blogSearchValue: "" })
               }}> {searchIcon} </button>
-            </div>
+            </div> */}
             <h3>Newest</h3>
             {!this.state.searchedArr ? (
               <p>Search for Blogs</p>
