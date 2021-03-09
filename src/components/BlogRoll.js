@@ -47,17 +47,17 @@ class BlogRoll extends React.Component {
         });
       }
     });
-    
+
     return (
       <div className="columns is-desktop">
-        <div style={{marginRight:'10px'}}className="columns">
+        <div style={{ marginRight: '10px' }} className="columns">
           {posts &&
             posts.map(({ node: post }) => {
               // console.log('post', post);
-             
+
               // console.log('description', post.excerpt.length);
               // let paddedDescription = post.excerpt.padEnd(300)
-              return <div style={{ "display": "inline-block" }} className="column" key={post.id}>
+              return <div style={{ "display": "inline-flex" }} className="column" key={post.id}>
                 <article
                   className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
                     }`}
@@ -65,7 +65,9 @@ class BlogRoll extends React.Component {
 
                   <header>
                     {post.frontmatter.featuredimage ? (
+
                       <div style={{ margin: '0px' }} className="featured-thumbnail">
+
                         <PreviewCompatibleImage
                           imageInfo={{
                             image: post.frontmatter.featuredimage,
@@ -76,29 +78,26 @@ class BlogRoll extends React.Component {
                     ) : null}
                   </header>
                   <div>
-                    <p  style={{'whiteSpace': 'break-spaces'}} className="post-meta">
+                    <span style={{fontSize:'12px'}} className="subtitle">
+                      {post.frontmatter.date}
+                    </span>
+                    <p style={{ 'whiteSpace': 'break-spaces' }} className="post-meta">
                       <Link
                         className="title has-text-primary is-size-4"
                         to={post.fields.slug}
                       >
-                      {`${post.frontmatter.title.padEnd(titleMaxLength - post.frontmatter.title.length, ' ')}`}
+                        {`${post.frontmatter.title.padEnd(titleMaxLength - post.frontmatter.title.length, ' ')}`}
 
                         {/* {post.frontmatter.title} */}
                       </Link>
-                      <span> &bull; </span>
-                      <span className="subtitle is-size-5 is-block">
-                        {post.frontmatter.date}
-                      </span>
+
                     </p>
-                    <p style={{'whiteSpace': 'break-spaces'}}>
-                      {post.excerpt.padEnd(200, ' ')}
+                    <p style={{ 'whiteSpace': 'break-spaces' }}>
+                      {post.excerpt}
                       {/* {`${post.excerpt.length > 100 ? post.excerpt.slice(0,100) : post.excerpt.padEnd(100, ' ')}`} */}
-                      {/* <br />
-                    <br />
-                    <Link className="button" to={post.fields.slug}>
-                      Keep Reading →
-                  </Link> */}
+
                     </p>
+
                   </div>
                 </article>
               </div>
