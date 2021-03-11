@@ -38,6 +38,7 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     let tags = []
+    
 
     posts.forEach((post) => {
       if (post.node.frontmatter.tags) {
@@ -46,18 +47,67 @@ class BlogRoll extends React.Component {
         });
       }
     });
-
+    const uniqueSet = new Set(tags);
+    const backToArray = [...uniqueSet];
     return (
       <div className="columns">
-        <div style={{ marginRight: '10px' }}>
+        <div className="column" style={{ marginRight: '10px', paddingTop: '0px' }}>
           {posts &&
             posts.map(({ node: post }) => {
-              // console.log('post', post);
+              console.log('post.frontmatter.featuredimage,', post.frontmatter.featuredimage.childImageSharp.fluid)
+              return <div className="column box cardColumnContainer" key={post.id}>
+                {/* container */}
+                <div class="cardContainer">
+                  {/* header */}
+                  <div class="headerContainer">
+                    {/* img */}
+                    <div className="imageDiv">
+                      {/* <img className="cardHeaderImage" src={post.frontmatter.featuredimage.childImageSharp.fluid.base64} /> */}
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          className: 'imageStyle',
+                          image: post.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for post ${post.frontmatter.title}`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                  {/* body */}
+                  <div class="bodyContainer">
+                    {/* <p>date</p>
+                    <p>title</p>
+                    <p>description</p> */}
+                    <span style={{ fontSize: '12px' }} className="subtitle">
+                      {post.frontmatter.date}
+                    </span>
+                    <p style={{ 'whiteSpace': 'break-spaces' }} className="post-meta">
+                      <Link
+                        className="title has-text-primary is-size-4"
+                        to={post.fields.slug}
+                      >
+                        {`${post.frontmatter.title}`}
+                      </Link>
 
-              // console.log('description', post.excerpt.length);
-              // let paddedDescription = post.excerpt.padEnd(300)
-              return <div style={{display:'inline-flex', width:'50%'}} className="column" key={post.id}>
-                <article
+                    </p>
+                    <p styyyle={{ 'whiteSpace': 'break-spaces' }}>
+                      {post.excerpt}
+                    </p>
+                  </div>
+                  {/* footer */}
+                  <div class="footerContainer">
+                    <p style={{ 'whiteSpace': 'break-spaces', fontSize: '12px' }} className="post-meta">
+                      <Link
+                        className="title has-text-primary is-size-5"
+                        to={post.fields.slug}
+                      >
+                        Read more >
+                      </Link>
+
+                    </p>
+                  </div>
+
+                </div>
+                {/* <article
                   className={`blog-list-item tile is-child box notification ${post.frontmatter.featuredpost ? 'is-featured' : ''
                     }`}
                 >
@@ -77,7 +127,7 @@ class BlogRoll extends React.Component {
                     ) : null}
                   </header>
                   <div>
-                    <span styyyle={{fontSize:'12px'}} className="subtitle">
+                    <span styyyle={{ fontSize: '12px' }} className="subtitle">
                       {post.frontmatter.date}
                     </span>
                     <p styyyle={{ 'whiteSpace': 'break-spaces' }} className="post-meta">
@@ -86,7 +136,6 @@ class BlogRoll extends React.Component {
                         to={post.fields.slug}
                       >
                         {`${post.frontmatter.title}`}
-                        {/* {`${post.frontmatter.title.padEnd(titleMaxLength - post.frontmatter.title.length, ' ')}`} */}
                       </Link>
 
                     </p>
@@ -95,7 +144,7 @@ class BlogRoll extends React.Component {
                     </p>
 
                   </div>
-                </article>
+                </article> */}
               </div>
             })}
         </div>
@@ -130,7 +179,7 @@ class BlogRoll extends React.Component {
             <hr />
             <h3>Search by Tags:</h3>
             <ul className="taglist">
-              {tags ? tags.map((tag, index) => (
+              {backToArray ? backToArray.map((tag, index) => (
                 <li key={index + 1000} className="allTags">
                   <Link className="tagLink" to={`/tags/${kebabCase(tag)}/`}>
                     {tag.padEnd(100, ' ')}
@@ -174,7 +223,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 200)
+              excerpt(pruneLength: 150)
               id
               fields {
                 slug

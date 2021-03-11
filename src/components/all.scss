@@ -13,6 +13,40 @@ $black: #2b2523;
 body {
   background-color: #f2f1f1;
 }
+
+.cardContainer {
+  height: 100%;
+}
+.cardColumnContainer {
+  background-color: #fff;
+  width: 30%;
+  height: 500px;
+  margin: 10px;
+  display: inline-block !important;
+  padding-top:0px !important;
+  margin-top:0px !important;
+}
+.imageStyle {
+  height: 50%;
+}
+.imageDiv {
+  height: 100%;
+}
+.cardHeaderImage {
+  width: 100%;
+  height: 100%;
+}
+.headerContainer {
+  height: 25%;
+  margin-top:10px;
+}
+.bodyContainer {
+  height: 65%;
+}
+.footerContainer {
+  height: 5%;
+}
+
 .layoutDiv > .navbar {
   background-color: #f2f1f1;
 }
