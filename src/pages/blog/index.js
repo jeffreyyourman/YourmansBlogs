@@ -47,7 +47,7 @@ export default class BlogIndexPage extends React.Component {
             </div>
           </div>
           <div className="column is-3">
-            <div >
+            <div className="socialIconsDiv" >
               {fbIcon}
               {twitterIcon}
               {pinIcon}
