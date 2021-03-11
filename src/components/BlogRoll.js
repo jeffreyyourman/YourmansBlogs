@@ -55,7 +55,7 @@ class BlogRoll extends React.Component {
           {posts &&
             posts.map(({ node: post }) => {
               console.log('post.frontmatter.featuredimage,', post.frontmatter.featuredimage.childImageSharp.fluid)
-              return <div className="column box cardColumnContainer" key={post.id}>
+              return <div className="column box cardColumnContainer is-desktop is-mobile" key={post.id}>
                 {/* container */}
                 <div class="cardContainer">
                   {/* header */}
