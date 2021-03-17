@@ -29,6 +29,16 @@ body {
   padding-top:0px !important;
   margin-top:0px !important;
 }
+
+.cardColumnContainerIndex {
+  background-color: #fff;
+  width: 35%;
+  height: 500px;
+  margin: 10px;
+  display: inline-block !important;
+  padding-top:0px !important;
+  margin-top:0px !important;
+}
 .imageStyle {
   height: 50%;
 }
@@ -236,3 +246,62 @@ $menu-label-color: $white-ter;
 //     text-align: center;
 //     max-width: 70%;
 //     margin: 0 0 1em;
+@media screen and (max-width: 1000px) {
+  .cardColumnContainer {
+    width:45%;
+  }
+  .cardColumnContainerIndex {
+    width:45%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .cardColumnContainer {
+    width:45%;
+  }
+  .cardColumnContainerIndex {
+    width:45%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .cardColumnContainerIndex {
+    width:45%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .cardColumnContainer {
+    width:60%;
+  }
+  .cardColumnContainerIndex {
+    width:75%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardColumnContainer {
+    width:100%;
+  }
+  .cardColumnContainerIndex {
+    width:100%;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .cardColumnContainer {
+    width:100%;
+  }
+    .cardColumnContainerIndex {
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 300%) {
+  .cardColumnContainer {
+    width:100%;
+  }
+    .cardColumnContainerIndex {
+    width:100%;
+  }
+}
+
+

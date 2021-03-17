@@ -56,13 +56,9 @@ class BlogRoll extends React.Component {
             posts.map(({ node: post }) => {
               console.log('post.frontmatter.featuredimage,', post.frontmatter.featuredimage.childImageSharp.fluid)
               return <div className="column box cardColumnContainer is-desktop is-mobile" key={post.id}>
-                {/* container */}
                 <div class="cardContainer">
-                  {/* header */}
                   <div class="headerContainer">
-                    {/* img */}
                     <div className="imageDiv">
-                      {/* <img className="cardHeaderImage" src={post.frontmatter.featuredimage.childImageSharp.fluid.base64} /> */}
                       <PreviewCompatibleImage
                         imageInfo={{
                           className: 'imageStyle',
@@ -72,11 +68,8 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   </div>
-                  {/* body */}
                   <div class="bodyContainer">
-                    {/* <p>date</p>
-                    <p>title</p>
-                    <p>description</p> */}
+                    
                     <span style={{ fontSize: '12px' }} className="subtitle">
                       {post.frontmatter.date}
                     </span>
@@ -93,14 +86,13 @@ class BlogRoll extends React.Component {
                       {post.excerpt}
                     </p>
                   </div>
-                  {/* footer */}
                   <div class="footerContainer">
                     <p style={{ 'whiteSpace': 'break-spaces', fontSize: '12px' }} className="post-meta">
                       <Link
                         className="title has-text-primary is-size-5"
                         to={post.fields.slug}
                       >
-                        Read more >
+                        Read more {'>'}
                       </Link>
 
                     </p>
