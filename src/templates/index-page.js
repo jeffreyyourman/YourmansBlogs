@@ -70,7 +70,7 @@ export const IndexPageTemplate = ({
 
     <section className="section section--gradient">
       <div className="container">
-        <div className="section">
+        <div className="section mainSection">
           <div className="columns">
             <div className="column">
               <div style={{ 'textAlign': 'center' }} className="content">
@@ -98,7 +98,7 @@ export const IndexPageTemplate = ({
                     </Link>
                   </div>
                 </div> */}
-                <div className="column">
+                <div className="column" >
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories index page
                   </h3>

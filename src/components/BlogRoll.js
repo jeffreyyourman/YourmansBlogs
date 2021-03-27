@@ -38,8 +38,9 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     let tags = []
-    
 
+
+    console.log('posts', posts)
     posts.forEach((post) => {
       if (post.node.frontmatter.tags) {
         post.node.frontmatter.tags.forEach(element => {
@@ -51,13 +52,13 @@ class BlogRoll extends React.Component {
     const backToArray = [...uniqueSet];
     return (
       <div className="columns">
-        <div className="column" style={{ marginRight: '10px', paddingTop: '0px' }}>
+        <div className="column is-9" style={{textAlign:'center', paddingTop:'0px'}}>
           {posts &&
             posts.map(({ node: post }) => {
-              console.log('post.frontmatter.featuredimage,', post.frontmatter.featuredimage.childImageSharp.fluid)
+              // console.log('post.frontmatter.featuredimage,', post.frontmatter.featuredimage.childImageSharp.fluid)
               return <div className="column box cardColumnContainer is-desktop is-mobile" key={post.id}>
-                <div class="cardContainer">
-                  <div class="headerContainer">
+                <div className="cardContainer">
+                  <div className="headerContainer">
                     <div className="imageDiv">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -68,8 +69,8 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   </div>
-                  <div class="bodyContainer">
-                    
+                  <div className="bodyContainer">
+
                     <span style={{ fontSize: '12px' }} className="subtitle">
                       {post.frontmatter.date}
                     </span>
@@ -86,7 +87,7 @@ class BlogRoll extends React.Component {
                       {post.excerpt}
                     </p>
                   </div>
-                  <div class="footerContainer">
+                  <div className="footerContainer">
                     <p style={{ 'whiteSpace': 'break-spaces', fontSize: '12px' }} className="post-meta">
                       <Link
                         className="title has-text-primary is-size-5"
@@ -140,7 +141,7 @@ class BlogRoll extends React.Component {
               </div>
             })}
         </div>
-        <div className="column box is-one-fifth filterPosts">
+        <div className="column box filterPosts">
           <div styyyle={{ "display": "inline-block" }} className="">
             {/* <> */}
             {/* <div styyyle={{ "display": "flex" }} className="control has-icons-left has-icons-right">
@@ -150,6 +151,11 @@ class BlogRoll extends React.Component {
                 this.setState({ blogSearchValue: "" })
               }}> {searchIcon} </button>
             </div> */}
+            <div className="column" style={{ 'paddingRight': '0px' }}>
+              <div >
+                <input className="input" type="text" placeholder="Search blogs" />
+              </div>
+            </div>
             <h3>Newest</h3>
             {!this.state.searchedArr ? (
               <p>Search for Blogs</p>

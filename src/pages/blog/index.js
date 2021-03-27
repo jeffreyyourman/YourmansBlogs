@@ -37,16 +37,16 @@ export default class BlogIndexPage extends React.Component {
             Latest Stories index.js
           </h1>
         </div> */}
-        <div style={{ 'margin': 'auto', 'width': '95%' }} className="columns is-desktop">
-          <div className="column  is-desktop">
+        <div style={{ 'margin': 'auto', 'width': '95%', "textAlign": 'center' }} className="columns">
+          <div className="column ">
             <img src="https://via.placeholder.com/728x100?text=728x90+LeaderboardC/Ohttps://placeholder.com/banner-ads/" />
           </div>
-          <div className="column  is-desktop">
+          <div className="column ">
             <div style={{ 'height': '75px' }}>
               <img src="https://via.placeholder.com/728x100?text=728x90+LeaderboardC/Ohttps://placeholder.com/banner-ads/" />
             </div>
           </div>
-          <div className="column is-3">
+          <div className="column">
             <div className="socialIconsDiv" >
               {fbIcon}
               {twitterIcon}
@@ -55,6 +55,47 @@ export default class BlogIndexPage extends React.Component {
               {googleIcon}
             </div>
           </div>
+        </div>
+
+
+
+
+        <div style={{ 'margin': 'auto', 'width': '95%' }} className="columns is-desktop">
+          <nav className="navbar" style={{ backgroundColor: 'transparent', fontSize: '15px' }} rolrrre="navigation" ariaaa-label="main navigation">
+            <div id="navbarBasicExample" >
+            {/* THIS GOES ABOVE DIV classNameee="navbar-menu" */}
+              <div className="navbar-start categoryStartItem">
+                <a className="navbar-item categoryItem">
+                  Arts & Crafts
+                </a>
+                <a className="navbar-item categoryItem">
+                  Photography
+                </a>
+                <a className="navbar-item categoryItem">
+                  SVG - Cricut Designing
+                </a>
+                <a className="navbar-item categoryItem">
+                  Mother of the Bride Tips
+                </a>
+                <a className="navbar-item categoryItem">
+                  Creative Crafts
+                </a>
+              </div>
+
+              {/* <div className="navbar-end">
+                      <div className="navbar-item">
+                        <div className="buttons">
+                          <a className="button is-primary">
+                            <strong>Sign up</strong>
+                          </a>
+                          <a className="button is-light">
+                            Log in
+                          </a>
+                        </div>
+                      </div>
+                    </div> */}
+            </div>
+          </nav>
         </div>
 
         {/* <div style={{ 'margin': 'auto', 'width': '95%' }} className="columns is-desktop">
@@ -113,52 +154,7 @@ export default class BlogIndexPage extends React.Component {
           <div className="container">
             <div className="columns  is-desktop">
               <div className="column">
-                <nav className="navbar" style={{'fontSize': '15px'}}rolrrre="navigation" ariaaa-label="main navigation">
-                  <div className="navbar-brand">
-                    {/* <a className="navbar-item" href="https://bulma.io">
-                      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-                    </a> */}
 
-                    {/* <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                      <span aria-hidden="true"></span>
-                    </a> */}
-                  </div>
-
-                  <div id="navbarBasicExample" classNameee="navbar-menu">
-                    <div className="navbar-start">
-                      <a className="navbar-item">
-                        Arts & Crafts
-                      </a>
-                      <a className="navbar-item">
-                        Photography
-                      </a>
-                      <a className="navbar-item">
-                        SVG - Cricut Designing
-                      </a>
-                      <a className="navbar-item">
-                        Mother of the Bride Tips
-                      </a>
-                      <a className="navbar-item">
-                        Creative Crafts
-                      </a>
-                    </div>
-
-                    {/* <div className="navbar-end">
-                      <div className="navbar-item">
-                        <div className="buttons">
-                          <a className="button is-primary">
-                            <strong>Sign up</strong>
-                          </a>
-                          <a className="button is-light">
-                            Log in
-                          </a>
-                        </div>
-                      </div>
-                    </div> */}
-                  </div>
-                </nav>
 
                 {/* <nav
                   className="navbar"
@@ -195,16 +191,12 @@ export default class BlogIndexPage extends React.Component {
                   </div>
                 </nav> */}
               </div>
-              <div className="column is-3 " style={{ 'paddingRight': '0px' }}>
-                <div >
-                  <input className="input" type="text" placeholder="Search blogs" />
-                </div>
-              </div>
+
             </div>
           </div>
         </section>
         <section className="section blogSection is-desktop">
-          <div className="container">
+          <div className="container-fluid">
             <div className="content">
               <BlogRoll />
             </div>
