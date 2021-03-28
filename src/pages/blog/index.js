@@ -150,13 +150,13 @@ export default class BlogIndexPage extends React.Component {
           </div>
         </div> */}
 
-        <section className="section categoryNavbar  is-desktop">
+       {/* <section className="section categoryNavbar  is-desktop">
           <div className="container">
             <div className="columns  is-desktop">
               <div className="column">
 
 
-                {/* <nav
+                 <nav
                   className="navbar"
                   role="navigation"
                   aria-label="main-navigation"
@@ -189,12 +189,12 @@ export default class BlogIndexPage extends React.Component {
                       </div>
                     </div>
                   </div>
-                </nav> */}
+                </nav> 
               </div>
 
             </div>
           </div>
-        </section>
+        </section>*/}
         <section className="section blogSection is-desktop">
           <div className="container-fluid">
             <div className="content">

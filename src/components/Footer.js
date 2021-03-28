@@ -12,11 +12,23 @@ import { fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlus
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG)
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', display: 'inline', verticalAlign: 'middle', 'fontSize': '25px' }} icon={faFacebookSquare} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', display: 'inline', verticalAlign: 'middle', 'fontSize': '25px' }} icon={faTwitterSquare} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', display: 'inline', verticalAlign: 'middle', 'fontSize': '25px' }} icon={faPinterestSquare} />
-const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', display: 'inline', verticalAlign: 'middle', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', display: 'inline', verticalAlign: 'middle', 'fontSize': '25px' }} icon={faInstagramSquare} />
+// display: 'inline', verticalAlign: 'middle',
+// const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'fontSize': '25px' }} icon={faFacebookSquare} />
+// // display: 'inline', verticalAlign: 'middle',
+// const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'fontSize': '25px' }} icon={faTwitterSquare} />
+// // display: 'inline', verticalAlign: 'middle',
+// const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'fontSize': '25px' }} icon={faPinterestSquare} />
+// // display: 'inline', verticalAlign: 'middle',
+// const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
+// // display: 'inline', verticalAlign: 'middle',
+// const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'fontSize': '25px' }} icon={faInstagramSquare} />
+
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebookSquare} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitterSquare} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterestSquare} />
+const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagramSquare} />
+
 
 const Footer = class extends React.Component {
   render() {
@@ -29,12 +41,33 @@ const Footer = class extends React.Component {
             style={{ width: '14em', height: '10em' }}
           />
         </div>
+        {/* <> */}
+        <div style={{ marginTop: '5px', textAlign: 'center', marginBottom: '5px' }} >
+          <a title="facebook" href="https://facebook.com">
+            {fbIcon}
+          </a>
+          <a title="twitter" href="https://twitter.com">
+            {twitterIcon}
+          </a>
+          <a title="instagram" href="https://instagram.com">
+            {instaIcon}
+          </a>
+
+          <a title="googlePlus" href="https://google.com">
+            {googleIcon}
+          </a>
+
+          <a title="pinterest" href="https://pinterest.com">
+            {pinIcon}
+          </a>
+        </div>
+        {/* </> */}
         <div className="content has-text-centered has-background-black has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: '100vw' }} className="columns">
-              <div style={{paddingTop:'0px'}} className="column is-4">
-                <section  className="menu">
-                  <ul style={{marginTop: '0px'}} className="menu-list">
+              <div style={{ paddingTop: '0px' }} className="column is-4">
+                <section className="menu">
+                  <ul style={{ marginTop: '0px' }} className="menu-list">
                     <li className="linksLiFooter">
                       <Link to="/" className="navbar-item footerNavbarItem">
                         Home
@@ -68,9 +101,9 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div style={{paddingTop:'0px'}} className="column is-4">
-                <section  className="menu">
-                  <ul style={{marginTop: '0px'}} className="menu-list">
+              <div style={{ paddingTop: '0px' }} className="column is-4">
+                <section className="menu">
+                  <ul style={{ marginTop: '0px' }} className="menu-list">
                     <li className="linksLiFooter">
                       <Link className="navbar-item footerNavbarItem" to="/blog">
                         Latest Stories footer
@@ -84,40 +117,7 @@ const Footer = class extends React.Component {
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
-                <section className="menu">
 
-                  {/* <div> */}
-                  <a title="facebook" href="https://facebook.com">
-                    {fbIcon}
-                  </a>
-                  {/* </div> */}
-
-                  {/* <div> */}
-                  <a title="twitter" href="https://twitter.com">
-                    {twitterIcon}
-                  </a>
-                  {/* </div> */}
-
-                  {/* <div> */}
-                  <a title="instagram" href="https://instagram.com">
-                    {instaIcon}
-                  </a>
-                  {/* </div> */}
-
-                  {/* <div> */}
-                  <a title="googlePlus" href="https://google.com">
-                    {googleIcon}
-                  </a>
-                  {/* </div> */}
-
-                  {/* <div> */}
-                  <a title="pinterest" href="https://pinterest.com">
-                    {pinIcon}
-                  </a>
-                  {/* </div> */}
-                </section>
-              </div>
             </div>
           </div>
         </div>
