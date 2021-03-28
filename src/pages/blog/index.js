@@ -5,15 +5,15 @@ import BlogRoll from '../../components/BlogRoll'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
+import { fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram } from "@fortawesome/free-brands-svg-icons"
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG)
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '35px' }} icon={faFacebookSquare} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faTwitterSquare} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faPinterestSquare} />
+library.add(fab, faFacebook, faTwitter, faPinterest, faGooglePlusG,faInstagram)
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '35px' }} icon={faFacebook} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faTwitter} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faPinterest} />
 const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faInstagramSquare} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faInstagram} />
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -48,28 +48,23 @@ export default class BlogIndexPage extends React.Component {
           </div>
           <div className="column">
             <div className="socialIconsDiv" >
-              <a title="facebook" href="https://facebook.com">
+              <a title="facebook" target="_blank" href="https://facebook.com">
                 {fbIcon}
               </a>
-              <a title="twitter" href="https://twitter.com">
+              <a title="twitter" target="_blank" href="https://twitter.com">
                 {twitterIcon}
               </a>
-              <a title="instagram" href="https://instagram.com">
+              <a title="instagram" target="_blank" href="https://instagram.com">
                 {instaIcon}
               </a>
 
-              <a title="googlePlus" href="https://google.com">
+              <a title="googlePlus" target="_blank" href="https://google.com">
                 {googleIcon}
               </a>
 
-              <a title="pinterest" href="https://pinterest.com">
+              <a title="pinterest" target="_blank" href="https://pinterest.com">
                 {pinIcon}
               </a>
-              {/* {fbIcon}
-              {twitterIcon}
-              {pinIcon}
-              {instaIcon}
-              {googleIcon} */}
             </div>
           </div>
         </div>
@@ -98,120 +93,9 @@ export default class BlogIndexPage extends React.Component {
                   Creative Crafts
                 </a>
               </div>
-
-              {/* <div className="navbar-end">
-                      <div className="navbar-item">
-                        <div className="buttons">
-                          <a className="button is-primary">
-                            <strong>Sign up</strong>
-                          </a>
-                          <a className="button is-light">
-                            Log in
-                          </a>
-                        </div>
-                      </div>
-                    </div> */}
             </div>
           </nav>
         </div>
-
-        {/* <div style={{ 'margin': 'auto', 'width': '95%' }} className="columns is-desktop">
-          <div className="column">
-            <nav
-              className="navbar"
-              role="navigation"
-              aria-label="main-navigation"
-            >
-              <div className="container">
-                <div className="navbar-brand">
-                  <div
-                    data-target="navMenu"
-                  >
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                </div>
-                <div
-                  id="navMenu"
-                >
-  
-                  <div className="navbar-start has-text-centered">
-                    <Link className="navbar-item" to="/about">
-                      Arts & Crafts
-                    </Link>
-                    <Link className="navbar-item" to="/blog">
-                      Photography
-                    </Link>
-                    <Link className="navbar-item" to="/blog">
-                      SVG - Cricut Designing
-                    </Link>
-                    <Link className="navbar-item" to="/blog">
-                      Mother of the Bride Tips
-                    </Link>
-                    <Link className="navbar-item" to="/contact">
-                      Creative Crafts
-                    </Link>
-                  </div>
-                  <div className="navbar-end has-text-centered">
-
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div>
-          <div className="column is-3">
-            <div >
-              <input className="input is-medium" type="text" placeholder="Search blogs" />
-            </div>
-          </div>
-        </div> */}
-
-        {/* <section className="section categoryNavbar  is-desktop">
-          <div className="container">
-            <div className="columns  is-desktop">
-              <div className="column">
-
-
-                 <nav
-                  className="navbar"
-                  role="navigation"
-                  aria-label="main-navigation"
-                >
-                  <div className="container">
-          
-                    <div
-                      id="navMenu"
-                    >
-
-                      <div className="navbar-start">
-                        <Link className="navbar-item" to="/about">
-                          Arts & Crafts
-                        </Link>
-                        <Link className="navbar-item" to="/blog">
-                          Photography
-                        </Link>
-                        <Link className="navbar-item" to="/blog">
-                          SVG - Cricut Designing
-                        </Link>
-                        <Link className="navbar-item" to="/blog">
-                          Mother of the Bride Tips
-                        </Link>
-                        <Link className="navbar-item" to="/contact">
-                          Creative Crafts
-                        </Link>
-                      </div>
-                      <div className="navbar-end has-text-centered">
-
-                      </div>
-                    </div>
-                  </div>
-                </nav> 
-              </div>
-
-            </div>
-          </div>
-        </section>*/}
         <section className="section blogSection is-desktop">
           <div className="container-fluid">
             <div className="content">

@@ -7,15 +7,15 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
+import { fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram } from "@fortawesome/free-brands-svg-icons"
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG)
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebookSquare} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitterSquare} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterestSquare} />
+library.add(fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram)
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebook} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitter} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterest} />
 const googleIcon = <FontAwesomeIcon style={{color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagramSquare} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagram} />
 
 // { fbIcon }
 // { twitterIcon }
