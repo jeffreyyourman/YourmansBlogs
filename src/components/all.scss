@@ -198,7 +198,7 @@ $menu-label-color: $white-ter;
   padding: 2em;
 }
 .social a {
-  padding: 0.5em 0.5em 0.3em 0.5em;
+  padding: 15px;
   border-radius: 1em;
   background-color: $white-ter;
   margin: 0.5em;
@@ -262,6 +262,19 @@ a.navbar-item.is-active,
 .navbar-link.is-active {
   background-color: transparent;
   color: #d64000;
+}
+
+.menu > .menu-list > .linksLiFooter > a.footerNavbarItem:focus,
+.menu > .menu-list > .linksLiFooter > a.footerNavbarItem:focus-within,
+.menu > .menu-list > .linksLiFooter > a.footerNavbarItem:hover,
+.menu > .menu-list > .linksLiFooter > a.footerNavbarItem.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+.navbar-link.is-active 
+{
+  // background-color: whitesmoke !important;
+  color: #d64000 !important;
 }
 
 @media screen and (max-width: 1024px) {
