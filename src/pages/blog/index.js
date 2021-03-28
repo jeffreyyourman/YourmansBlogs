@@ -9,11 +9,11 @@ import { fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlus
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG)
-const fbIcon = <FontAwesomeIcon style={{ 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebookSquare} />
-const twitterIcon = <FontAwesomeIcon style={{ 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitterSquare} />
-const pinIcon = <FontAwesomeIcon style={{ 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterestSquare} />
-const googleIcon = <FontAwesomeIcon style={{ 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagramSquare} />
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebookSquare} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitterSquare} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterestSquare} />
+const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagramSquare} />
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -63,7 +63,7 @@ export default class BlogIndexPage extends React.Component {
         <div style={{ 'margin': 'auto', 'width': '95%' }} className="columns is-desktop">
           <nav className="navbar" style={{ backgroundColor: 'transparent', fontSize: '15px' }} rolrrre="navigation" ariaaa-label="main navigation">
             <div id="navbarBasicExample" >
-            {/* THIS GOES ABOVE DIV classNameee="navbar-menu" */}
+              {/* THIS GOES ABOVE DIV classNameee="navbar-menu" */}
               <div className="navbar-start categoryStartItem">
                 <a className="navbar-item categoryItem">
                   Arts & Crafts
