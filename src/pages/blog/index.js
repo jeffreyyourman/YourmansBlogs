@@ -9,11 +9,11 @@ import { fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlus
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG)
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebookSquare} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitterSquare} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterestSquare} />
-const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagramSquare} />
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '35px' }} icon={faFacebookSquare} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faTwitterSquare} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faPinterestSquare} />
+const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faInstagramSquare} />
 
 export default class BlogIndexPage extends React.Component {
   render() {
@@ -48,11 +48,28 @@ export default class BlogIndexPage extends React.Component {
           </div>
           <div className="column">
             <div className="socialIconsDiv" >
-              {fbIcon}
+              <a title="facebook" href="https://facebook.com">
+                {fbIcon}
+              </a>
+              <a title="twitter" href="https://twitter.com">
+                {twitterIcon}
+              </a>
+              <a title="instagram" href="https://instagram.com">
+                {instaIcon}
+              </a>
+
+              <a title="googlePlus" href="https://google.com">
+                {googleIcon}
+              </a>
+
+              <a title="pinterest" href="https://pinterest.com">
+                {pinIcon}
+              </a>
+              {/* {fbIcon}
               {twitterIcon}
               {pinIcon}
               {instaIcon}
-              {googleIcon}
+              {googleIcon} */}
             </div>
           </div>
         </div>
@@ -150,7 +167,7 @@ export default class BlogIndexPage extends React.Component {
           </div>
         </div> */}
 
-       {/* <section className="section categoryNavbar  is-desktop">
+        {/* <section className="section categoryNavbar  is-desktop">
           <div className="container">
             <div className="columns  is-desktop">
               <div className="column">

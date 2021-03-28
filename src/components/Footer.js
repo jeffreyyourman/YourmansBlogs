@@ -1,33 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
-// import facebook from '../img/social/facebook.svg'
-// import instagram from '../img/social/instagram.svg'
-// import twitter from '../img/social/twitter.svg'
-// import vimeo from '../img/social/vimeo.svg'
+import logo from '../img/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG, faInstagramSquare } from "@fortawesome/free-brands-svg-icons"
-// import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebookSquare, faTwitterSquare, faPinterestSquare, faGooglePlusG)
-// display: 'inline', verticalAlign: 'middle',
-// const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'fontSize': '25px' }} icon={faFacebookSquare} />
-// // display: 'inline', verticalAlign: 'middle',
-// const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'fontSize': '25px' }} icon={faTwitterSquare} />
-// // display: 'inline', verticalAlign: 'middle',
-// const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'fontSize': '25px' }} icon={faPinterestSquare} />
-// // display: 'inline', verticalAlign: 'middle',
-// const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
-// // display: 'inline', verticalAlign: 'middle',
-// const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'fontSize': '25px' }} icon={faInstagramSquare} />
 
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebookSquare} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitterSquare} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterestSquare} />
-const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagramSquare} />
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '35px' }} icon={faFacebookSquare} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faTwitterSquare} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faPinterestSquare} />
+const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faInstagramSquare} />
 
 
 const Footer = class extends React.Component {
@@ -78,16 +63,16 @@ const Footer = class extends React.Component {
                         About
                       </Link>
                     </li>
-                    <li className="linksLiFooter">
+                    {/* <li className="linksLiFooter">
                       <Link className="navbar-item footerNavbarItem" to="/products">
                         Products
                       </Link>
-                    </li>
-                    <li className="linksLiFooter">
+                    </li> */}
+                    {/* <li className="linksLiFooter">
                       <Link className="navbar-item footerNavbarItem" to="/contact/examples">
                         Form Examples
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="linksLiFooter">
                       <a
                         className="navbar-item footerNavbarItem"
@@ -104,11 +89,11 @@ const Footer = class extends React.Component {
               <div style={{ paddingTop: '0px' }} className="column is-4">
                 <section className="menu">
                   <ul style={{ marginTop: '0px' }} className="menu-list">
-                    <li className="linksLiFooter">
+                    {/* <li className="linksLiFooter">
                       <Link className="navbar-item footerNavbarItem" to="/blog">
                         Latest Stories footer
                       </Link>
-                    </li>
+                    </li> */}
                     <li className="linksLiFooter">
                       <Link className="navbar-item footerNavbarItem" to="/contact">
                         Contact
