@@ -10,6 +10,8 @@ featuredimage: /img/chemex.jpg
 tags:
   - brewing
   - chemex
+mytest:
+  - photography
 ---
 ![chemex](/img/chemex.jpg)
 
