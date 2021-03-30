@@ -11,11 +11,11 @@ import { fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram } f
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram)
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '25px' }} icon={faFacebook} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faTwitter} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faPinterest} />
-const googleIcon = <FontAwesomeIcon style={{color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '25px' }} icon={faInstagram} />
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'width': '25px' }} icon={faFacebook} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'width': '25px' }} icon={faTwitter} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'width': '25px' }} icon={faPinterest} />
+const googleIcon = <FontAwesomeIcon style={{color: '#db4a39', 'margin': '0px 10px 10px 10px', 'width': '25px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'width': '25px' }} icon={faInstagram} />
 
 // { fbIcon }
 // { twitterIcon }
@@ -38,16 +38,19 @@ export const BlogPostTemplate = ({
   useEffect(() => {
     function uniqueTags() {
       let tags = []
-      console.log('posts', posts)
-      posts.forEach((post) => {
-        if (post.node.frontmatter.tags) {
-          post.node.frontmatter.tags.forEach(element => {
-            tags.push(element)
-          });
-        }
-      });
-      const uniqueSet = new Set(tags);
-      setBackToArray([...uniqueSet]);
+      if (posts) {
+        
+        console.log('posts', posts)
+        posts.forEach((post) => {
+          if (post.node.frontmatter.tags) {
+            post.node.frontmatter.tags.forEach(element => {
+              tags.push(element)
+            });
+          }
+        });
+        const uniqueSet = new Set(tags);
+        setBackToArray([...uniqueSet]);
+      }
     }
     uniqueTags()
 
@@ -72,7 +75,7 @@ export const BlogPostTemplate = ({
 
     return newStr;
   }
-  console.log('backToArray', backToArray)
+  // console.log('backToArray', backToArray)
   return (
     <section className="section">
       {helmet || ''}
@@ -174,7 +177,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post, allMarkdownRemark } = data
-  // console.log('allMarkdownRemark', allMarkdownRemark.edges);
+  console.log('allMarkdownRemark', allMarkdownRemark);
   return (
     <>
       <Layout>
