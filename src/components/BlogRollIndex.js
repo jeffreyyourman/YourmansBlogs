@@ -54,8 +54,8 @@ class BlogRoll extends React.Component {
           {posts &&
             posts.map(({ node: post }) => (
               <div className="column box cardColumnContainerIndex is-desktop is-mobile" key={post.id}>
-                <div class="cardContainer">
-                  <div class="headerContainer">
+                <div className="cardContainer">
+                  <div className="headerContainer">
                     <div className="imageDiv">
                       <PreviewCompatibleImage
                         imageInfo={{
@@ -66,7 +66,7 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   </div>
-                  <div class="bodyContainer">
+                  <div className="bodyContainer">
 
                     <span style={{ fontSize: '12px' }} className="subtitle">
                       {post.frontmatter.date}
@@ -84,7 +84,7 @@ class BlogRoll extends React.Component {
                       {post.excerpt}
                     </p>
                   </div>
-                  <div class="footerContainer">
+                  <div className="footerContainer">
                     <p style={{ 'whiteSpace': 'break-spaces', fontSize: '12px' }} className="post-meta">
                       <Link
                         className="title has-text-primary is-size-5"

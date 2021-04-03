@@ -39,7 +39,7 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
     let tags = []
 
-
+    console.log('posts',posts);
     
     posts.forEach((post) => {
       if (post.node.frontmatter.tags) {
@@ -190,6 +190,7 @@ export default () => (
                 title
                 tags
                 templateKey
+                mytest
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {

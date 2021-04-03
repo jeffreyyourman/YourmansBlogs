@@ -9,11 +9,11 @@ import { fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram } f
 // import { faCheckSquare, faTable, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faFacebook, faTwitter, faPinterest, faGooglePlusG,faInstagram)
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'fontSize': '35px' }} icon={faFacebook} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faTwitter} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faPinterest} />
-const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'fontSize': '35px' }} icon={faInstagram} />
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 10px 10px 0px', 'width': '35px' }} icon={faFacebook} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 10px 10px 10px', 'width': '35px' }} icon={faTwitter} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 10px 10px 10px', 'width': '35px' }} icon={faPinterest} />
+const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 10px 10px 10px', 'width': '35px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 10px 10px 10px', 'width': '35px' }} icon={faInstagram} />
 
 export default class BlogIndexPage extends React.Component {
   render() {

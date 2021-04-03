@@ -21,15 +21,15 @@ const TagsPage = ({
             className="column is-10 is-offset-1"
             style={{ marginBottom: '6rem' }}
           >
-            <h1 style={{marginBottom:'0px'}}className="title is-size-2 is-bold-light">Tagsss</h1>
-            <ul style={{marginTop: '0px', display:'block'}} className="taglist">
+            <h1 style={{ marginBottom: '0px' }} className="title is-size-2 is-bold-light">Creative Tags</h1>
+            <ul style={{ marginTop: '0px', display: 'block' }} className="taglist">
               {group.map((tag) => (
                 <li key={tag.fieldValue}>
-                  <ul><Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>{tag.fieldValue} ({tag.totalCount})</Link></ul>
-
-                  {/* <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link> */}
+                  <ul>
+                    <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                      {tag.fieldValue} ({tag.totalCount})
+                    </Link>
+                  </ul>
                 </li>
               ))}
             </ul>

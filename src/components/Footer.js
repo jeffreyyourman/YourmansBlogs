@@ -8,11 +8,11 @@ import { fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram } f
 
 library.add(fab, faFacebook, faTwitter, faPinterest, faGooglePlusG, faInstagram)
 
-const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 20px 10px 0px', 'fontSize': '35px' }} icon={faFacebook} />
-const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 20px 10px 0px', 'fontSize': '35px' }} icon={faTwitter} />
-const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 20px 10px 0px', 'fontSize': '35px' }} icon={faPinterest} />
-const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 20px 10px 0px', 'fontSize': '35px' }} className="googleIcon" icon={faGooglePlusG} />
-const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 20px 10px 0px', 'fontSize': '35px' }} icon={faInstagram} />
+const fbIcon = <FontAwesomeIcon style={{ color: '#4267B2', 'margin': '0px 20px 10px 0px', 'width': '35px' }} icon={faFacebook} />
+const twitterIcon = <FontAwesomeIcon style={{ color: '#1DA1F2', 'margin': '0px 20px 10px 0px', 'width': '35px' }} icon={faTwitter} />
+const pinIcon = <FontAwesomeIcon style={{ color: '#E60023', 'margin': '0px 20px 10px 0px', 'width': '35px' }} icon={faPinterest} />
+const googleIcon = <FontAwesomeIcon style={{ color: '#db4a39', 'margin': '0px 20px 10px 0px', 'width': '35px' }} className="googleIcon" icon={faGooglePlusG} />
+const instaIcon = <FontAwesomeIcon style={{ color: '#833AB4', 'margin': '0px 20px 10px 0px', 'width': '35px' }} icon={faInstagram} />
 
 
 const Footer = class extends React.Component {
@@ -137,21 +137,14 @@ const Footer = class extends React.Component {
               </div>
               <div style={{ marginLeft: '2em', paddingTop: '0px' }} className="column is-4">
                 <section style={{ padding: '0.5em 0.75em' }} className="menu">
-                  <h3 style={{color:'whitesmoke'}}>About us</h3>
+                  <h3 style={{ color: 'whitesmoke' }}>About us</h3>
                   <p>
-                    this is the about us section this is the about us section 
-                    this is the about us section this is the about us section 
-                    this is the about us section this is the about us section 
                     this is the about us section this is the about us section
                     this is the about us section this is the about us section
                     this is the about us section this is the about us section
                     this is the about us section this is the about us section
                     this is the about us section this is the about us section
-                    this is the about us section this is the about us section
-                    this is the about us section this is the about us section
-                    this is the about us section this is the about us section
-                    this is the about us section this is the about us section
-                    </p>
+                  </p>
                 </section>
               </div>
             </div>
